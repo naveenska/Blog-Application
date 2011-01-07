@@ -4361,3 +4361,539 @@ Started GET "/" for 127.0.0.1 at 2011-01-05 15:31:57 +0530
   Processing by HomeController#index as HTML
 Rendered home/index.html.erb within layouts/application (1.9ms)
 Completed 200 OK in 6ms (Views: 5.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-01-05 18:00:41 +0530
+  Processing by HomeController#index as HTML
+Rendered home/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 8ms (Views: 5.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2011-01-05 18:00:42 +0530
+  Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.5ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+Rendered posts/index.html.erb within layouts/application (11.9ms)
+Completed 200 OK in 110ms (Views: 15.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/posts/12" for 127.0.0.1 at 2011-01-05 18:00:44 +0530
+  Processing by PostsController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[35mSQL (0.4ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE ("posts"."id" = 12) LIMIT 1[0m
+  [1m[35mTag Load (0.2ms)[0m  SELECT "tags".* FROM "tags" WHERE ("tags".post_id = 12)
+  [1m[36mComment Load (0.2ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE ("comments".post_id = 12)[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "posts".* FROM "posts" WHERE ("posts"."id" = 12) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE ("posts"."id" = 12) LIMIT 1[0m
+Rendered comments/_comment.html.erb (13.4ms)
+Rendered comments/_form.html.erb (5.0ms)
+Rendered posts/show.html.erb within layouts/application (82.7ms)
+Completed 200 OK in 101ms (Views: 86.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2011-01-05 18:00:47 +0530
+  Processing by PostsController#new as HTML
+Completed 401 Unauthorized in 0ms
+
+
+Started GET "/" for 127.0.0.1 at 2011-01-06 10:08:53 +0530
+  Processing by HomeController#index as HTML
+Rendered home/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 39ms (Views: 19.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2011-01-06 10:08:56 +0530
+  Processing by PostsController#index as HTML
+  [1m[36mPost Load (16.1ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+Rendered posts/index.html.erb within layouts/application (15.3ms)
+Completed 200 OK in 171ms (Views: 32.6ms | ActiveRecord: 16.1ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2011-01-06 10:08:58 +0530
+  Processing by PostsController#new as HTML
+Completed 401 Unauthorized in 0ms
+
+
+Started GET "/" for 127.0.0.1 at 2011-01-06 12:13:07 +0530
+  Processing by HomeController#index as HTML
+Rendered home/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 8ms (Views: 6.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2011-01-06 12:13:09 +0530
+  Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.5ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+Rendered posts/index.html.erb within layouts/application (11.8ms)
+Completed 200 OK in 108ms (Views: 15.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2011-01-06 12:13:10 +0530
+  Processing by PostsController#new as HTML
+Completed 401 Unauthorized in 0ms
+
+
+Started GET "/posts/12" for 127.0.0.1 at 2011-01-06 12:13:19 +0530
+  Processing by PostsController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[35mSQL (0.4ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE ("posts"."id" = 12) LIMIT 1[0m
+  [1m[35mTag Load (0.2ms)[0m  SELECT "tags".* FROM "tags" WHERE ("tags".post_id = 12)
+  [1m[36mComment Load (0.2ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE ("comments".post_id = 12)[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "posts".* FROM "posts" WHERE ("posts"."id" = 12) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE ("posts"."id" = 12) LIMIT 1[0m
+Rendered comments/_comment.html.erb (17.0ms)
+Rendered comments/_form.html.erb (21.9ms)
+Rendered posts/show.html.erb within layouts/application (133.0ms)
+Completed 200 OK in 162ms (Views: 147.3ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2011-01-06 12:13:29 +0530
+  Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.4ms)[0m  SELECT "posts".* FROM "posts"
+Rendered posts/index.html.erb within layouts/application (10.8ms)
+Completed 200 OK in 26ms (Views: 14.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2011-01-06 12:14:02 +0530
+  Processing by PostsController#new as HTML
+Completed 401 Unauthorized in 0ms
+
+
+Started GET "/" for 127.0.0.1 at 2011-01-06 12:50:57 +0530
+  Processing by HomeController#index as HTML
+Rendered home/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 32ms (Views: 31.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2011-01-06 12:51:01 +0530
+  Processing by PostsController#index as HTML
+  [1m[36mPost Load (14.3ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+Rendered posts/index.html.erb within layouts/application (13.0ms)
+Completed 200 OK in 174ms (Views: 46.9ms | ActiveRecord: 14.3ms)
+
+
+Started GET "/posts/12" for 127.0.0.1 at 2011-01-06 12:51:04 +0530
+  Processing by PostsController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[35mSQL (0.4ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE ("posts"."id" = 12) LIMIT 1[0m
+  [1m[35mTag Load (0.2ms)[0m  SELECT "tags".* FROM "tags" WHERE ("tags".post_id = 12)
+  [1m[36mComment Load (0.3ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE ("comments".post_id = 12)[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "posts".* FROM "posts" WHERE ("posts"."id" = 12) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE ("posts"."id" = 12) LIMIT 1[0m
+Rendered comments/_comment.html.erb (36.2ms)
+Rendered comments/_form.html.erb (46.8ms)
+Rendered posts/show.html.erb within layouts/application (209.3ms)
+Completed 200 OK in 228ms (Views: 212.8ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/posts/12/comments/6" for 127.0.0.1 at 2011-01-06 12:51:09 +0530
+  Processing by CommentsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"LcejbDz1vIIfqGMBQ1cL/8ktGEee5XpuXfV6mAwGrcA=", "post_id"=>"12", "id"=>"6"}
+Completed 401 Unauthorized in 0ms
+
+
+Started GET "/" for 127.0.0.1 at 2011-01-06 12:54:24 +0530
+  Processing by HomeController#index as HTML
+Rendered home/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 24ms (Views: 6.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-01-06 12:55:27 +0530
+  Processing by HomeController#index as HTML
+Rendered home/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 6ms (Views: 5.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-01-06 12:55:52 +0530
+  Processing by HomeController#index as HTML
+Rendered home/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 6ms (Views: 5.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-01-06 12:55:53 +0530
+  Processing by HomeController#index as HTML
+Rendered home/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 6ms (Views: 5.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-01-06 12:55:54 +0530
+  Processing by HomeController#index as HTML
+Rendered home/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 6ms (Views: 5.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-01-06 12:55:55 +0530
+  Processing by HomeController#index as HTML
+Rendered home/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 6ms (Views: 5.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-01-06 12:58:58 +0530
+  Processing by HomeController#index as HTML
+Rendered home/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 6ms (Views: 5.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2011-01-06 12:59:03 +0530
+  Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.5ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+Rendered posts/index.html.erb within layouts/application (11.3ms)
+Completed 200 OK in 109ms (Views: 14.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2011-01-06 12:59:05 +0530
+  Processing by PostsController#new as HTML
+Completed 401 Unauthorized in 0ms
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2011-01-06 12:59:17 +0530
+  Processing by PostsController#new as HTML
+Rendered tags/_form.html.erb (28.3ms)
+Rendered posts/_form.html.erb (98.4ms)
+Rendered posts/new.html.erb within layouts/application (117.8ms)
+Completed 200 OK in 153ms (Views: 138.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/posts" for 127.0.0.1 at 2011-01-06 12:59:43 +0530
+  Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"P9VeW/e+sGk1qfpnb7F6/DnLPeDdEW6GeNV/m66EqYA=", "post"=>{"name"=>"Naveen", "title"=>"Simple Blog", "content"=>"sakdha", "tags_attributes"=>{"0"=>{"name"=>"aaaa"}}}, "commit"=>"Create Post"}
+Completed 401 Unauthorized in 0ms
+
+
+Started POST "/posts" for 127.0.0.1 at 2011-01-06 12:59:43 +0530
+  Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"P9VeW/e+sGk1qfpnb7F6/DnLPeDdEW6GeNV/m66EqYA=", "post"=>{"name"=>"Naveen", "title"=>"Simple Blog", "content"=>"sakdha", "tags_attributes"=>{"0"=>{"name"=>"aaaa"}}}, "commit"=>"Create Post"}
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mAREL (0.3ms)[0m  [1mINSERT INTO "posts" ("name", "title", "content", "created_at", "updated_at") VALUES ('Naveen', 'Simple Blog', 'sakdha', '2011-01-06 07:29:43.426458', '2011-01-06 07:29:43.426458')[0m
+  [1m[35mAREL (0.1ms)[0m  INSERT INTO "tags" ("name", "post_id", "created_at", "updated_at") VALUES ('aaaa', 15, '2011-01-06 07:29:43.432396', '2011-01-06 07:29:43.432396')
+Redirected to http://localhost:3000/posts/15
+Completed 302 Found in 199ms
+
+
+Started GET "/posts/15" for 127.0.0.1 at 2011-01-06 12:59:43 +0530
+  Processing by PostsController#show as HTML
+  Parameters: {"id"=>"15"}
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE ("posts"."id" = 15) LIMIT 1[0m
+  [1m[35mTag Load (0.2ms)[0m  SELECT "tags".* FROM "tags" WHERE ("tags".post_id = 15)
+  [1m[36mComment Load (0.2ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE ("comments".post_id = 15)[0m
+Rendered comments/_comment.html.erb (0.0ms)
+Rendered comments/_form.html.erb (10.0ms)
+Rendered posts/show.html.erb within layouts/application (69.1ms)
+Completed 200 OK in 87ms (Views: 72.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2011-01-06 12:59:48 +0530
+  Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.4ms)[0m  SELECT "posts".* FROM "posts"
+Rendered posts/index.html.erb within layouts/application (33.5ms)
+Completed 200 OK in 49ms (Views: 37.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/posts/12" for 127.0.0.1 at 2011-01-06 12:59:51 +0530
+  Processing by PostsController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE ("posts"."id" = 12) LIMIT 1[0m
+  [1m[35mTag Load (0.2ms)[0m  SELECT "tags".* FROM "tags" WHERE ("tags".post_id = 12)
+  [1m[36mComment Load (0.3ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE ("comments".post_id = 12)[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "posts".* FROM "posts" WHERE ("posts"."id" = 12) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE ("posts"."id" = 12) LIMIT 1[0m
+Rendered comments/_comment.html.erb (13.8ms)
+Rendered comments/_form.html.erb (3.7ms)
+Rendered posts/show.html.erb within layouts/application (71.0ms)
+Completed 200 OK in 88ms (Views: 74.4ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/posts/12/comments/6" for 127.0.0.1 at 2011-01-06 12:59:55 +0530
+  Processing by CommentsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"P9VeW/e+sGk1qfpnb7F6/DnLPeDdEW6GeNV/m66EqYA=", "post_id"=>"12", "id"=>"6"}
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts" WHERE ("posts"."id" = 12) LIMIT 1
+  [1m[36mComment Load (0.2ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE ("comments".post_id = 12) AND ("comments"."id" = 6) LIMIT 1[0m
+  [1m[35mAREL (0.2ms)[0m  DELETE FROM "comments" WHERE ("comments"."id" = 6)
+Redirected to http://localhost:3000/posts/12
+Completed 302 Found in 135ms
+
+
+Started GET "/posts/12" for 127.0.0.1 at 2011-01-06 12:59:55 +0530
+  Processing by PostsController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE ("posts"."id" = 12) LIMIT 1[0m
+  [1m[35mTag Load (0.2ms)[0m  SELECT "tags".* FROM "tags" WHERE ("tags".post_id = 12)
+  [1m[36mComment Load (0.2ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE ("comments".post_id = 12)[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "posts".* FROM "posts" WHERE ("posts"."id" = 12) LIMIT 1
+Rendered comments/_comment.html.erb (32.8ms)
+Rendered comments/_form.html.erb (3.4ms)
+Rendered posts/show.html.erb within layouts/application (68.4ms)
+Completed 200 OK in 86ms (Views: 71.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/posts/12/edit" for 127.0.0.1 at 2011-01-06 13:00:01 +0530
+  Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE ("posts"."id" = 12) LIMIT 1[0m
+  [1m[35mTag Load (0.2ms)[0m  SELECT "tags".* FROM "tags" WHERE ("tags".post_id = 12)
+Rendered tags/_form.html.erb (5.0ms)
+Rendered posts/_form.html.erb (55.1ms)
+Rendered posts/edit.html.erb within layouts/application (58.6ms)
+Completed 200 OK in 88ms (Views: 73.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-01-07 10:27:35 +0530
+  Processing by HomeController#index as HTML
+Rendered home/index.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 38ms (Views: 37.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2011-01-07 10:27:39 +0530
+  Processing by PostsController#index as HTML
+  [1m[36mPost Load (20.1ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+Rendered posts/index.html.erb within layouts/application (16.7ms)
+Completed 200 OK in 180ms (Views: 35.8ms | ActiveRecord: 20.1ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2011-01-07 10:27:44 +0530
+  Processing by PostsController#new as HTML
+Completed 401 Unauthorized in 0ms
+
+
+Started GET "/posts" for 127.0.0.1 at 2011-01-07 10:29:24 +0530
+  Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.4ms)[0m  SELECT "posts".* FROM "posts"
+Rendered posts/index.html.erb within layouts/application (11.4ms)
+Completed 200 OK in 27ms (Views: 15.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2011-01-07 10:29:26 +0530
+  Processing by PostsController#new as HTML
+Completed   in 1ms
+
+NameError (undefined local variable or method `authenticate' for #<PostsController:0x8f191d8>):
+  
+
+Rendered /home/naveenk/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.4ms)
+Rendered /home/naveenk/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.5ms)
+Rendered /home/naveenk/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (9.7ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2011-01-07 10:29:34 +0530
+  Processing by PostsController#new as HTML
+Completed   in 1ms
+
+NameError (undefined local variable or method `authenticate' for #<PostsController:0x8d21ccc>):
+  
+
+Rendered /home/naveenk/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+Rendered /home/naveenk/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.7ms)
+Rendered /home/naveenk/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (7.1ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2011-01-07 10:32:07 +0530
+  Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.4ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+Rendered posts/index.html.erb within layouts/application (11.3ms)
+Completed 200 OK in 27ms (Views: 15.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2011-01-07 10:32:09 +0530
+  Processing by PostsController#new as HTML
+Rendered tags/_form.html.erb (4.9ms)
+Rendered posts/_form.html.erb (97.6ms)
+Rendered posts/new.html.erb within layouts/application (101.0ms)
+Completed 200 OK in 118ms (Views: 104.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/posts" for 127.0.0.1 at 2011-01-07 10:32:13 +0530
+  Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"9UdOSilfCR5CtEPabfk/DrkztSTWLnocVIPh5wuhFKw=", "post"=>{"name"=>"", "title"=>"", "content"=>"", "tags_attributes"=>{"0"=>{"name"=>""}}}, "commit"=>"Create Post"}
+Rendered tags/_form.html.erb (4.0ms)
+Rendered posts/_form.html.erb (14.8ms)
+Rendered posts/new.html.erb within layouts/application (17.8ms)
+Completed 200 OK in 51ms (Views: 21.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2011-01-07 10:32:15 +0530
+  Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.4ms)[0m  SELECT "posts".* FROM "posts"
+Rendered posts/index.html.erb within layouts/application (11.2ms)
+Completed 200 OK in 27ms (Views: 15.1ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/posts/13" for 127.0.0.1 at 2011-01-07 10:32:19 +0530
+  Processing by PostsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"9UdOSilfCR5CtEPabfk/DrkztSTWLnocVIPh5wuhFKw=", "id"=>"13"}
+  [1m[36mSQL (0.6ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mPost Load (0.3ms)[0m  SELECT "posts".* FROM "posts" WHERE ("posts"."id" = 13) LIMIT 1
+  [1m[36mComment Load (0.2ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE ("comments".post_id = 13)[0m
+  [1m[35mAREL (0.3ms)[0m  DELETE FROM "comments" WHERE ("comments"."id" = 7)
+  [1m[36mAREL (0.1ms)[0m  [1mDELETE FROM "comments" WHERE ("comments"."id" = 8)[0m
+  [1m[35mAREL (0.1ms)[0m  DELETE FROM "posts" WHERE ("posts"."id" = 13)
+Redirected to http://localhost:3000/posts
+Completed 302 Found in 149ms
+
+
+Started GET "/posts" for 127.0.0.1 at 2011-01-07 10:32:19 +0530
+  Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.4ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+Rendered posts/index.html.erb within layouts/application (10.2ms)
+Completed 200 OK in 25ms (Views: 14.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-01-07 10:34:25 +0530
+  Processing by HomeController#index as HTML
+Rendered home/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 6ms (Views: 5.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-01-07 10:34:28 +0530
+  Processing by HomeController#index as HTML
+Rendered home/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 7ms (Views: 6.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-01-07 15:26:43 +0530
+  Processing by HomeController#index as HTML
+Rendered home/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 44ms (Views: 44.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2011-01-07 15:26:45 +0530
+  Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.5ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+Rendered posts/index.html.erb within layouts/application (11.5ms)
+Completed 200 OK in 144ms (Views: 15.4ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/posts/15" for 127.0.0.1 at 2011-01-07 15:26:48 +0530
+  Processing by PostsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"A+B5lNDZh6BH7qJRzak2QMIjEPcVRfJDFJVPsK8zxVI=", "id"=>"15"}
+  [1m[35mSQL (0.6ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE ("posts"."id" = 15) LIMIT 1[0m
+  [1m[35mComment Load (0.2ms)[0m  SELECT "comments".* FROM "comments" WHERE ("comments".post_id = 15)
+  [1m[36mAREL (0.4ms)[0m  [1mDELETE FROM "posts" WHERE ("posts"."id" = 15)[0m
+Redirected to http://localhost:3000/posts
+Completed 302 Found in 217ms
+
+
+Started GET "/posts" for 127.0.0.1 at 2011-01-07 15:26:48 +0530
+  Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.4ms)[0m  SELECT "posts".* FROM "posts"
+Rendered posts/index.html.erb within layouts/application (9.9ms)
+Completed 200 OK in 48ms (Views: 13.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2011-01-07 15:26:50 +0530
+  Processing by PostsController#new as HTML
+Rendered tags/_form.html.erb (5.3ms)
+Rendered posts/_form.html.erb (101.0ms)
+Rendered posts/new.html.erb within layouts/application (104.4ms)
+Completed 200 OK in 121ms (Views: 108.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/posts" for 127.0.0.1 at 2011-01-07 15:26:52 +0530
+  Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"A+B5lNDZh6BH7qJRzak2QMIjEPcVRfJDFJVPsK8zxVI=", "post"=>{"name"=>"", "title"=>"", "content"=>"", "tags_attributes"=>{"0"=>{"name"=>""}}}, "commit"=>"Create Post"}
+Rendered tags/_form.html.erb (4.0ms)
+Rendered posts/_form.html.erb (15.0ms)
+Rendered posts/new.html.erb within layouts/application (17.9ms)
+Completed 200 OK in 72ms (Views: 21.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/posts" for 127.0.0.1 at 2011-01-07 15:27:03 +0530
+  Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"A+B5lNDZh6BH7qJRzak2QMIjEPcVRfJDFJVPsK8zxVI=", "post"=>{"name"=>"ergswhjws", "title"=>"srtjyds", "content"=>"sthsr", "tags_attributes"=>{"0"=>{"name"=>""}}}, "commit"=>"Create Post"}
+  [1m[36mAREL (0.2ms)[0m  [1mINSERT INTO "posts" ("name", "title", "content", "created_at", "updated_at") VALUES ('ergswhjws', 'srtjyds', 'sthsr', '2011-01-07 09:57:03.293002', '2011-01-07 09:57:03.293002')[0m
+Redirected to http://localhost:3000/posts/16
+Completed 302 Found in 140ms
+
+
+Started GET "/posts/16" for 127.0.0.1 at 2011-01-07 15:27:03 +0530
+  Processing by PostsController#show as HTML
+  Parameters: {"id"=>"16"}
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts" WHERE ("posts"."id" = 16) LIMIT 1
+  [1m[36mTag Load (0.2ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE ("tags".post_id = 16)[0m
+  [1m[35mComment Load (0.2ms)[0m  SELECT "comments".* FROM "comments" WHERE ("comments".post_id = 16)
+Rendered comments/_comment.html.erb (0.0ms)
+Rendered comments/_form.html.erb (36.1ms)
+Rendered posts/show.html.erb within layouts/application (83.7ms)
+Completed 200 OK in 103ms (Views: 87.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/posts/16/edit" for 127.0.0.1 at 2011-01-07 15:27:06 +0530
+  Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"16"}
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE ("posts"."id" = 16) LIMIT 1[0m
+  [1m[35mTag Load (0.2ms)[0m  SELECT "tags".* FROM "tags" WHERE ("tags".post_id = 16)
+Rendered tags/_form.html.erb (4.7ms)
+Rendered posts/_form.html.erb (50.2ms)
+Rendered posts/edit.html.erb within layouts/application (53.5ms)
+Completed 200 OK in 72ms (Views: 57.1ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/posts/16" for 127.0.0.1 at 2011-01-07 15:27:08 +0530
+  Processing by PostsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"A+B5lNDZh6BH7qJRzak2QMIjEPcVRfJDFJVPsK8zxVI=", "post"=>{"name"=>"ergswhjws", "title"=>"srtjyds", "content"=>"sthsr", "tags_attributes"=>{"0"=>{"name"=>""}}}, "commit"=>"Update Post", "id"=>"16"}
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE ("posts"."id" = 16) LIMIT 1[0m
+Redirected to http://localhost:3000/posts/16
+Completed 302 Found in 51ms
+
+
+Started GET "/posts/16" for 127.0.0.1 at 2011-01-07 15:27:08 +0530
+  Processing by PostsController#show as HTML
+  Parameters: {"id"=>"16"}
+  [1m[35mPost Load (0.3ms)[0m  SELECT "posts".* FROM "posts" WHERE ("posts"."id" = 16) LIMIT 1
+  [1m[36mTag Load (0.2ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE ("tags".post_id = 16)[0m
+  [1m[35mComment Load (0.2ms)[0m  SELECT "comments".* FROM "comments" WHERE ("comments".post_id = 16)
+Rendered comments/_comment.html.erb (0.0ms)
+Rendered comments/_form.html.erb (32.8ms)
+Rendered posts/show.html.erb within layouts/application (65.1ms)
+Completed 200 OK in 88ms (Views: 68.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2011-01-07 15:27:11 +0530
+  Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.4ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+Rendered posts/index.html.erb within layouts/application (10.2ms)
+Completed 200 OK in 25ms (Views: 13.8ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/posts/16" for 127.0.0.1 at 2011-01-07 15:27:16 +0530
+  Processing by PostsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"A+B5lNDZh6BH7qJRzak2QMIjEPcVRfJDFJVPsK8zxVI=", "id"=>"16"}
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts" WHERE ("posts"."id" = 16) LIMIT 1
+  [1m[36mComment Load (0.2ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE ("comments".post_id = 16)[0m
+  [1m[35mAREL (0.1ms)[0m  DELETE FROM "posts" WHERE ("posts"."id" = 16)
+Redirected to http://localhost:3000/posts
+Completed 302 Found in 139ms
+
+
+Started GET "/posts" for 127.0.0.1 at 2011-01-07 15:27:16 +0530
+  Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.4ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+Rendered posts/index.html.erb within layouts/application (10.0ms)
+Completed 200 OK in 50ms (Views: 13.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-01-07 15:44:25 +0530
+  Processing by HomeController#index as HTML
+Rendered home/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 6ms (Views: 5.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2011-01-07 15:44:27 +0530
+  Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.5ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+Rendered posts/index.html.erb within layouts/application (10.9ms)
+Completed 200 OK in 108ms (Views: 14.5ms | ActiveRecord: 0.5ms)

@@ -1,4 +1,6 @@
 SecondApp::Application.routes.draw do
+ # devise_for :models
+
   get "home/index"
 
   resources :posts do
